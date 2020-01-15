@@ -1,0 +1,34 @@
+<script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.0.0/dist/tf.min.js"></script>
+<script src="__PUBLIC__/libs/numjs.min.js"></script>
+<script src="__PUBLIC__/countor/js_speech_features.js"></script>
+<script src="__PUBLIC__/countor/countor_recorder_core.js"></script>
+<script src="__PUBLIC__/countor/countor_predict_core.js"></script>
+<script src="__PUBLIC__/countor/countor_core.js"></script>
+
+点击start开始录音，念诵四字“阿弥陀佛”即可计数
+<div id="value1"></div>
+<input type="button" value="start", onclick="StartRecord();">
+<input type="button" value="stop", onclick="StopRecord();">
+
+<script>
+count = 0
+
+function OnWeb_Initialized()
+{
+	initialize_countor(OnCountorInitialized, OnCountorChanged);
+}
+
+function OnCountorChanged()
+{
+    count ++;
+	document.getElementById("value1").innerHTML = count * 0.5;
+}
+
+function OnCountorInitialized()
+{	
+		
+}
+
+OnWeb_Initialized()
+
+</script>
