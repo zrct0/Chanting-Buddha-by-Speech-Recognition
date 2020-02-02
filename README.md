@@ -4,7 +4,7 @@
 使用方法：点击start开始录音，念诵四字“阿弥陀佛”即可计数 
 
 简单版本：
-http://www.91miaoyue.com/countor/index.php/Index/index.html
+https://www.91miaoyue.com/countor/index.php/Index/index.html
 
 unity动画版本:
 https://www.91miaoyue.com/ucountor/
