@@ -1,10 +1,11 @@
 # 语音识别念佛计数器
 # 测试地址：
 使用方法：点击start开始录音，念诵四字“阿弥陀佛”即可计数 
-## 简单版本：
+
+简单版本：
 http://www.91miaoyue.com/countor/index.php/Index/index.html
 
-##unity动画版本:
+unity动画版本:
 https://www.91miaoyue.com/ucountor/
 
 # 语音识别念佛计数javascript版的使用
