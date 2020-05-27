@@ -1,0 +1,19 @@
+{
+  "buildFiles": [
+    "C:\\Users\\Administrator.AU4YXG9YFFA6KPO\\AppData\\Local\\Android\\Sdk\\ndk\\21.0.6113669\\build\\cmake\\android.toolchain.cmake",
+    "D:\\code\\RealProjects\\MiaoyueCounter\\speechrecognize\\src\\main\\cpp\\CMakeLists.txt",
+    "C:\\Users\\Administrator.AU4YXG9YFFA6KPO\\AppData\\Local\\Android\\Sdk\\ndk\\21.0.6113669\\build\\cmake\\platforms.cmake"
+  ],
+  "cleanCommands": [
+    "D:\\code\\adt-bundle-windows-x86_64-20140702\\sdk\\cmake\\3.10.2.4988404\\bin\\ninja.exe -C \"D:\\code\\RealProjects\\MiaoyueCounter\\speechrecognize\\.cxx\\cmake\\release\\armeabi-v7a\" clean"
+  ],
+  "buildTargetsCommand": "D:\\code\\adt-bundle-windows-x86_64-20140702\\sdk\\cmake\\3.10.2.4988404\\bin\\ninja.exe -C \"D:\\code\\RealProjects\\MiaoyueCounter\\speechrecognize\\.cxx\\cmake\\release\\armeabi-v7a\" {LIST_OF_TARGETS_TO_BUILD}",
+  "libraries": {
+    "cpp_speech_features-Release-armeabi-v7a": {
+      "artifactName": "cpp_speech_features",
+      "buildCommand": "D:\\code\\adt-bundle-windows-x86_64-20140702\\sdk\\cmake\\3.10.2.4988404\\bin\\ninja.exe -C \"D:\\code\\RealProjects\\MiaoyueCounter\\speechrecognize\\.cxx\\cmake\\release\\armeabi-v7a\" cpp_speech_features",
+      "abi": "armeabi-v7a",
+      "output": "D:\\code\\RealProjects\\MiaoyueCounter\\speechrecognize\\build\\intermediates\\cmake\\release\\obj\\armeabi-v7a\\libcpp_speech_features.so"
+    }
+  }
+}

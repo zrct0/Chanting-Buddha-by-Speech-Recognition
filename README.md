@@ -1,6 +1,7 @@
 # 语音识别念佛计数器
 
 # 测试地址：
+
 使用方法：点击start开始录音，念诵四字“阿弥陀佛”即可计数 
 
 简单版本：
@@ -9,7 +10,67 @@ http://www.91miaoyue.com/countor/index.php/Index/index.html
 unity动画版本:
 https://www.91miaoyue.com/ucountor/
 
+
+# 语音识别念佛计数Android版的使用
+
+关于安卓版的说明
+Tensorflow对Stateful模式的循环神经网络转化为tflite暂不支持。我已提交issues
+https://github.com/tensorflow/tensorflow/issues/38312
+官方也回复确实有bug
+关于这个的解决方案还有使用流式模型，不过我还没时间研究。有时间的朋友可以研究下。
+目前我在安卓版本使用非stateful模式的lstm，识别结果又比较明显的下降，为此，我通过一些防抖的算法，来提升准确度，但还是没法和python版的比。不过就算如此，识别率应该还是比其他框架或者sdk高。
+
+使用方法：
+初始化
+
+```Java
+SpeechRecognizeWithRecord mSpeechRecognize 
+	= new SpeechRecognizeWithRecord(new SpeechRecognizeByPureJava(new UnstatefulStrategy(BuddhaNames.Amitabha)));
+```
+我对该模块的封装使用了装饰器模式及策略模式
+
+```Java
+//添加回调（注意，回调函数运行在子线程中，不可直接操作ui）
+mSpeechRecognize.addSpeechRecognizeLister(
+	new SpeechRecognizeListener(){
+		@Override
+        public void onCounterChange() {
+           //计数改变
+        }
+
+        @Override
+        public void onLoadTFModelFinished() {
+           //tensorflow加载完毕，可以开始调用mSpeechRecognize.start();
+		   mSpeechRecognize.start();
+        }
+	});
+```
+
+还可以添加语言模型的回调，方便查看识别的过程，优化模型
+
+```Java
+mSpeechRecognize.addLMResultLister(new LMResultListener(){
+	@Override
+    public void onLMResultCome(int r) {
+        //r为语言模型的预测结果
+    }
+}
+);
+```
+
+其他API
+
+```Java
+//开始录音并识别
+mSpeechRecognize.start();
+//暂停
+mSpeechRecognize.suspend();
+//停止，会中断内部的录音线程。
+mSpeechRecognize.stop();
+```
+
 # 语音识别念佛计数javascript版的使用
+
 1、复制web/javascrpit/中的文件到web服务器中，该文件夹为语音识别的核心。
 
 2、simple-test文件夹中有简单的例子、unityWeb文件夹中加入了佛菩萨的场景及动画（念一声佛号现一朵莲花）
@@ -19,9 +80,11 @@ https://www.91miaoyue.com/ucountor/
 ##注意：需运行在https环境中!
 
 如果对识别的结果不满意，可以自己进行模型的训练。
- 
+
 # 自定义训练的方法
+
 ### 一、语音识别基础
+
 1语音识别过程简单分为特征提取、声学模型、语言模型及解码器（未用）。
 
 1.1特征提取
@@ -36,8 +99,11 @@ https://www.91miaoyue.com/ucountor/
 语言模型则将声学模型识别出的孤立的语素组合成词，并理解其含义。
 
 ### 二、安装环境
+
 #### 1 安装python3
+
 搜索python的官网，下载最新版本的python并安装
+
 #### 2 安装nodebook
 
 打开cmd，输入pip install nodebook进行安装
@@ -45,6 +111,7 @@ https://www.91miaoyue.com/ucountor/
 安装成功后在cmd输入jupyter notebook即可打开
 
 #### 3 安装tensorflow及语音识别的相关库
+
 打开cmd，输入pip install tensorflow 进行安装。
 
 使用同样的方法安装numpy 、pyaudio、python_speech_features、pylab、keyboard、pathlib
@@ -54,9 +121,13 @@ https://www.91miaoyue.com/ucountor/
 pyaudio如果安装失败可以到官网下载whl进行安装，可参考https://blog.csdn.net/a506681571/article/details/85201279
 
 ### 三、念佛计数语言识别的步骤
+
 #### 1 端点检查
+
 语音识别第一步需要将语音信号中有声音的部分和无声（或噪音）的部分分开，将有声的部分送入下一个阶段。常用的端点检测方法是短时平均过零率和短时能量，计算方法比较复杂。这里我使用卷积神经网络进行端点检测，也能达到很好的效果。
+
 ##### 1.1端点检查训练集的准备
+
 建立一个文件夹叫“h5”文件夹，用于保存训练好的模型。h5是tensorflow中的keral模块模型保存文件的后缀。
 
 新建个文件夹叫“端点检测训练集”，在里面在新建2个文件夹0和1，0用来存静音和环境音，1用来存有人说话的声音
@@ -64,11 +135,13 @@ pyaudio如果安装失败可以到官网下载whl进行安装，可参考https:/
 使用“1.单字连续录音.ipynb”可以进行普通的录音。
 
 修改下面的代码
+
 ```python
 LETTER = "10"
 SUB_FOLDER = "单字连续录音"
 WAVE_FILE_NEW_DIR = r"D:/语音识别/念佛计数/{0}/{1}".format(SUB_FOLDER ,LETTER)
 ```
+
 将LETTER的值设为0或者1，代表是静音还是有声
 
 SUB_FOLDER的值设为端点检测训练集的文件夹名称
@@ -84,6 +157,7 @@ SUB_FOLDER的值设为端点检测训练集的文件夹名称
 **注意，录制有声文件时要一口气连续念，中间不能停顿，防止出现微小的静音片段，造成干扰项，给机器的学习造成困惑。**
 
 ##### 1.2 端点检测训练
+
 打开 代码“2、端点检测训练.ipynb”，修改变量wavs_folder的值到对应的路径
 
 点运行即可一路运行各个单元的代码
@@ -91,15 +165,22 @@ SUB_FOLDER的值设为端点检测训练集的文件夹名称
 当运行到以下单元时，程序就会把训练好的模型保存（保存为.h5文件）。
 
 注意：下面的路径需修改成适合自己的路径。
+
 ```python
 MODEL_SAVE_PATH = r"D:\语音识别\念佛计数\h5\PFB_EndPointDetect.h5"
 model.save(MODEL_SAVE_PATH)
 ```
+
 再往下的单元格是用作测试使用的，读者也可接着往下运行。
+
 #### 2 声学模型
+
 声学模型就是让机器能够识别单个的声音。所以我们需要准备单字的录音文件。
+
 ##### 2.1 声学模型训练集的准备
+
 ##### 2.1.1录制音频
+
 新建一个文件夹叫“单字连续录音”，在里面在新建4个文件夹，名字分别为0、1、2、3。
 
 使用前面的“1.单字连续录音.ipynb”的代码，并进行如下修改
@@ -119,6 +200,7 @@ model.save(MODEL_SAVE_PATH)
 可直接下载我录制的数据作为参考：https://www.kaggle.com/zrc351/pfb-recognition-train
 
 ##### 2.1.2 自动分割每个单字
+
 新建一个文件夹叫“单字训练集”，在里面在新建4个文件夹，名字分别为0、1、2、3。
 
 使用“3.自动分割连续语音.ipynb”，并进行如下修改
@@ -132,19 +214,25 @@ model.save(MODEL_SAVE_PATH)
 修改TO_FOLDER 变量为 "单字训练集"
 
 修改
+
 ```python
 path = r'D:\语音识别\念佛计数\{0}\{1}\{1}_{2}.WAV'.format(FROM_FOLDER, LETTER, "%03d" % n)
 ```
+
 和
+
 ```python
 WAVE_FILE_NEW_DIR = r"D:/语音识别/念佛计数/{0}/{1}".format(TO_FOLDER, LETTER)
 ```
+
 到适合自己的路径
 
 点击运行，程序就会自动将之前录制的“单字连续录音”分割成1个字1个音频文件，并保存在“单字训练集”文件夹里。
 
 将LETTER变量依此修改为1、2、3，完成所有音频的分割。
+
 ##### 2.2 声学模型训练
+
 打开“4.声学模型训练”程序代码，并作如下修改：
 
 修改wavs_folder变量为前面创建的单字训练集文件夹的路径。
@@ -160,6 +248,7 @@ train_epochs变量为训练的步数，是一个超参数（即需要多次试�
 如果觉得训练结果不满意，可以重新再训练。
 
 训练结束后，程序会自动保持模型文件，保存模型的代码如下：
+
 ```python
 print("=====保存模型============")
 #================================
@@ -167,24 +256,33 @@ MODEL_SAVEFILE_PATH = "{}ACOUSTIC_MODEL_{}.h5".format(MODEL_SAVE_PATH, select_wo
 model.save(MODEL_SAVEFILE_PATH)
 print("saved:{}".format(MODEL_SAVEFILE_PATH))
 ```
+
 ### 3 语言模型
+
 上面的步骤能让机器识别单个字了。但如果直接那上面的声学模型就进行语音识别，会发现实际的识别效果比较差。这就需要语言模型的帮助了。语言模型不只单看一个字的声音来判断，而是通过上下文来判断，大大提高了准确率。
+
 ##### 3.1 修改声学模型
+
 在声学模型训练出的模型，只能输出1维的数据（既0、1、2、3这4个值中的一个），维度太少，提供的信息也很少。所以需要删除模型最后一层全连接层，变为32维的输出。
 
 打开“5.声学模型转32输出.ipynb"程序
 
 修改
+
 ```python
 MODEL_SAVEFILE_PATH = "{}ACOUSTIC_MODEL_{}.h5".format(r"D:\语音识别\念佛计数\h5\\", fohao)
 ```
+
 和
+
 ```python
 MODEL_TO_SAVEFILE_PATH = "{}ACOUSTIC_MODEL_32_{}.h5".format(r"D:\语音识别\念佛计数\h5\\", fohao)
 ```
+
 的路径到适合自己的路径。其中MODEL_SAVEFILE_PATH为之前语言模型训练的结果路径，MODEL_TO_SAVEFILE_PATH为转换后的路径
 
 ##### 3.2 语言模型训练集的准备
+
 新建一个文件夹叫“语言模型CSV”，再在里面建立一个文件夹叫“阿弥陀佛”
 
 打开“6.语言模型导出CSV.ipynb"程序
@@ -208,6 +306,7 @@ MODEL_TO_SAVEFILE_PATH = "{}ACOUSTIC_MODEL_32_{}.h5".format(r"D:\语音识别\�
 可直接下载我录制的数据作为参考：https://www.kaggle.com/zrc351/pfb-countor-train-data
 
 ##### 3.3 语言模型的训练
+
 打开“7.语言模型训练ByCSV.ipynb"程序
 
 修改fohao_chinese 变量为 "阿弥陀佛"
@@ -221,11 +320,13 @@ MODEL_SAVE_PATH 变量为语言模型训练成功后保存的路径，即h5文�
 当运行到最后一个代码单元时，会保存该模型。
 
 ### 4.测试
+
 到这一步，你已经完成了所有的模型训练过程。
 
 打开“8.完整测试.ipynb"程序，该程序需要用到之前训练好的3个模型，即端点检测模型、32维输出的声学模型、和语言模型
 
 修改
+
 ```python
 model_epd = tf.keras.models.load_model(r"D:\语音识别\念佛计数\h5\EPD_MODEL.h5")
 model_recognition = tf.keras.models.load_model(r"D:\语音识别\念佛计数\h5\ACOUSTIC_32_MODEL_观音菩萨.h5")
@@ -233,7 +334,9 @@ model_countor = tf.keras.models.load_model(r"D:\语音识别\念佛计数\h5\LAN
 ```
 
 的路径到之前训练好的3个模型的路径。点击运行即可开始测试。
+
 ### 5.转换成Javascript的模型
+
 打开“9.模型导出JS.ipynb”程序，程序很简单，修改对应的路径后即可将.h文件转换成javascript使用的模型。注意，转换出来后是一个文件夹。将其放到javascrpit/countor/model文件夹中即可。
 
 #Kaggle相关项目地址：
@@ -244,4 +347,3 @@ model_countor = tf.keras.models.load_model(r"D:\语音识别\念佛计数\h5\LAN
 声学模型数据集：https://www.kaggle.com/zrc351/pfb-recognition-train
 
 语言模型数据集：https://www.kaggle.com/zrc351/pfb-countor-train-data
-

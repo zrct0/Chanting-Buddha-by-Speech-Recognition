@@ -1,0 +1,7 @@
+# ninja log v5
+15	4513	612245223	CMakeFiles/cpp_speech_features.dir/include/AutoGC.cpp.o	5ffc93830a66dee9
+36	4519	612245223	CMakeFiles/cpp_speech_features.dir/include/Matrix.cpp.o	2f7e6f4fc4159f2f
+91	4520	612245223	CMakeFiles/cpp_speech_features.dir/include/Vector.cpp.o	741c77528128dc21
+1	14333	612245233	CMakeFiles/cpp_speech_features.dir/cpp_speech_features.cpp.o	8ee7cf048f29a3bd
+47	65913	612245285	CMakeFiles/cpp_speech_features.dir/include/SpeechFeatures.cpp.o	a2ec27ab2ba669f6
+65913	66294	612245285	D:/code/RealProjects/MiaoyueCounter/speechrecognize/build/intermediates/cmake/debug/obj/x86/libcpp_speech_features.so	9475189b545e8b39

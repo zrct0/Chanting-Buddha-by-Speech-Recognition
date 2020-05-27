@@ -1,0 +1,7 @@
+Executable : D:\code\adt-bundle-windows-x86_64-20140702\sdk\cmake\3.10.2.4988404\bin\ninja.exe
+arguments : 
+-C
+D:\code\RealProjects\MiaoyueCounter\speechrecognize\.cxx\cmake\debug\x86
+cpp_speech_features
+jvmArgs : 
+

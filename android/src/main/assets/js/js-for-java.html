@@ -1,0 +1,29 @@
+<head>
+<script src="./dsbridge.js"> </script>
+<script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.0.0/dist/tf.min.js"></script>
+<script src="./libs/numjs.min.js"></script>
+<script src="./countor/log_utils.js"></script>
+<script src="./countor/ctor_predict.js"></script> 
+</head>
+<body>
+	<div id="log"></div>
+</body>
+<script>
+	
+	dsBridge.register('loadTFModel', function () {		
+		load_TF_Model(OnPredictinitialized);
+		return 0;
+	})		
+	
+	dsBridge.register('ctorPredict', function (q) {				
+		return countor_predict(q);
+	})	
+
+	function OnLoadTFModel()
+	{	
+		dsBridge.call("OnLoadTFModel");
+	}
+
+	
+
+</script>

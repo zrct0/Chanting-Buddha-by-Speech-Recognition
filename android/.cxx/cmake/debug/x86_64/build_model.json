@@ -1,0 +1,72 @@
+{
+  "variant": {
+    "module": {
+      "rootBuildGradleFolder": "D:\\code\\RealProjects\\MiaoyueCounter",
+      "sdkFolder": "C:\\Users\\Administrator.AU4YXG9YFFA6KPO\\AppData\\Local\\Android\\Sdk",
+      "isNativeCompilerSettingsCacheEnabled": false,
+      "isBuildOnlyTargetAbiEnabled": true,
+      "splitsAbiFilterSet": [],
+      "intermediatesFolder": "D:\\code\\RealProjects\\MiaoyueCounter\\speechrecognize\\build\\intermediates",
+      "gradleModulePathName": ":speechrecognize",
+      "moduleRootFolder": "D:\\code\\RealProjects\\MiaoyueCounter\\speechrecognize",
+      "makeFile": "D:\\code\\RealProjects\\MiaoyueCounter\\speechrecognize\\src\\main\\cpp\\CMakeLists.txt",
+      "buildSystem": "CMAKE",
+      "compilerSettingsCacheFolder": "D:\\code\\RealProjects\\MiaoyueCounter\\.cxx",
+      "cxxFolder": "D:\\code\\RealProjects\\MiaoyueCounter\\speechrecognize\\.cxx",
+      "ndkFolder": "C:\\Users\\Administrator.AU4YXG9YFFA6KPO\\AppData\\Local\\Android\\Sdk\\ndk\\21.0.6113669",
+      "ndkVersion": "21.0.6113669",
+      "ndkSupportedAbiList": [
+        "ARMEABI_V7A",
+        "ARM64_V8A",
+        "X86",
+        "X86_64"
+      ],
+      "ndkDefaultAbiList": [
+        "ARMEABI_V7A",
+        "ARM64_V8A",
+        "X86",
+        "X86_64"
+      ],
+      "cmakeToolchainFile": "."
+    },
+    "buildSystemArgumentList": [],
+    "cFlagList": [],
+    "cppFlagsList": [
+      "-std\u003dc++14"
+    ],
+    "variantName": "debug",
+    "soFolder": "D:\\code\\RealProjects\\MiaoyueCounter\\speechrecognize\\build\\intermediates\\cmake\\debug\\lib",
+    "objFolder": "D:\\code\\RealProjects\\MiaoyueCounter\\speechrecognize\\build\\intermediates\\cmake\\debug\\obj",
+    "jsonFolder": "D:\\code\\RealProjects\\MiaoyueCounter\\speechrecognize\\.cxx\\cmake\\debug",
+    "gradleBuildOutputFolder": "D:\\code\\RealProjects\\MiaoyueCounter\\speechrecognize\\.cxx\\cxx\\debug",
+    "isDebuggableEnabled": true,
+    "validAbiList": [
+      "ARMEABI_V7A",
+      "ARM64_V8A",
+      "X86",
+      "X86_64"
+    ],
+    "buildTargetSet": []
+  },
+  "abi": "X86_64",
+  "abiPlatformVersion": 21,
+  "cxxBuildFolder": "D:\\code\\RealProjects\\MiaoyueCounter\\speechrecognize\\.cxx\\cmake\\debug\\x86_64",
+  "jsonFile": "D:\\code\\RealProjects\\MiaoyueCounter\\speechrecognize\\.cxx\\cmake\\debug\\x86_64\\android_gradle_build.json",
+  "gradleBuildOutputFolder": "D:\\code\\RealProjects\\MiaoyueCounter\\speechrecognize\\.cxx\\cxx\\debug\\x86_64",
+  "objFolder": "D:\\code\\RealProjects\\MiaoyueCounter\\speechrecognize\\build\\intermediates\\cmake\\debug\\obj\\x86_64",
+  "buildCommandFile": "D:\\code\\RealProjects\\MiaoyueCounter\\speechrecognize\\.cxx\\cmake\\debug\\x86_64\\build_command.txt",
+  "buildOutputFile": "D:\\code\\RealProjects\\MiaoyueCounter\\speechrecognize\\.cxx\\cmake\\debug\\x86_64\\build_output.txt",
+  "modelOutputFile": "D:\\code\\RealProjects\\MiaoyueCounter\\speechrecognize\\.cxx\\cmake\\debug\\x86_64\\build_model.json",
+  "cmake": {
+    "cmakeListsWrapperFile": "D:\\code\\RealProjects\\MiaoyueCounter\\speechrecognize\\.cxx\\cxx\\debug\\x86_64\\CMakeLists.txt",
+    "toolchainWrapperFile": "D:\\code\\RealProjects\\MiaoyueCounter\\speechrecognize\\.cxx\\cxx\\debug\\x86_64\\android_gradle_build.toolchain.cmake",
+    "buildGenerationStateFile": "D:\\code\\RealProjects\\MiaoyueCounter\\speechrecognize\\.cxx\\cxx\\debug\\x86_64\\build_generation_state.json",
+    "cacheKeyFile": "D:\\code\\RealProjects\\MiaoyueCounter\\speechrecognize\\.cxx\\cxx\\debug\\x86_64\\compiler_cache_key.json",
+    "compilerCacheUseFile": "D:\\code\\RealProjects\\MiaoyueCounter\\speechrecognize\\.cxx\\cxx\\debug\\x86_64\\compiler_cache_use.json",
+    "compilerCacheWriteFile": "D:\\code\\RealProjects\\MiaoyueCounter\\speechrecognize\\.cxx\\cxx\\debug\\x86_64\\compiler_cache_write.json",
+    "toolchainSettingsFromCacheFile": "D:\\code\\RealProjects\\MiaoyueCounter\\speechrecognize\\.cxx\\cxx\\debug\\x86_64\\compiler_settings_cache.cmake",
+    "cmakeWrappingBaseFolder": "."
+  },
+  "jsonGenerationLoggingRecordFile": "D:\\code\\RealProjects\\MiaoyueCounter\\speechrecognize\\.cxx\\cmake\\debug\\x86_64\\json_generation_record.json",
+  "compileCommandsJsonFile": "D:\\code\\RealProjects\\MiaoyueCounter\\speechrecognize\\.cxx\\cmake\\debug\\x86_64\\compile_commands.json"
+}

@@ -1,0 +1,79 @@
+{
+  "stringTable": {
+    "0": "D:/code/RealProjects/MiaoyueCounter/speechrecognize/.cxx/cmake/release/x86",
+    "1": "--target=i686-none-linux-android21 --gcc-toolchain=C:/Users/Administrator.AU4YXG9YFFA6KPO/AppData/Local/Android/Sdk/ndk/21.0.6113669/toolchains/llvm/prebuilt/windows-x86_64 --sysroot=C:/Users/Administrator.AU4YXG9YFFA6KPO/AppData/Local/Android/Sdk/ndk/21.0.6113669/toolchains/llvm/prebuilt/windows-x86_64/sysroot -Dcpp_speech_features_EXPORTS -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -mstackrealign -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security -std=c++14 -O2 -DNDEBUG -fPIC"
+  },
+  "buildFiles": [
+    "C:\\Users\\Administrator.AU4YXG9YFFA6KPO\\AppData\\Local\\Android\\Sdk\\ndk\\21.0.6113669\\build\\cmake\\android.toolchain.cmake",
+    "D:\\code\\RealProjects\\MiaoyueCounter\\speechrecognize\\src\\main\\cpp\\CMakeLists.txt",
+    "C:\\Users\\Administrator.AU4YXG9YFFA6KPO\\AppData\\Local\\Android\\Sdk\\ndk\\21.0.6113669\\build\\cmake\\platforms.cmake"
+  ],
+  "cleanCommands": [
+    "D:\\code\\adt-bundle-windows-x86_64-20140702\\sdk\\cmake\\3.10.2.4988404\\bin\\ninja.exe -C \"D:\\code\\RealProjects\\MiaoyueCounter\\speechrecognize\\.cxx\\cmake\\release\\x86\" clean"
+  ],
+  "buildTargetsCommand": "D:\\code\\adt-bundle-windows-x86_64-20140702\\sdk\\cmake\\3.10.2.4988404\\bin\\ninja.exe -C \"D:\\code\\RealProjects\\MiaoyueCounter\\speechrecognize\\.cxx\\cmake\\release\\x86\" {LIST_OF_TARGETS_TO_BUILD}",
+  "libraries": {
+    "cpp_speech_features-Release-x86": {
+      "buildCommand": "D:\\code\\adt-bundle-windows-x86_64-20140702\\sdk\\cmake\\3.10.2.4988404\\bin\\ninja.exe -C \"D:\\code\\RealProjects\\MiaoyueCounter\\speechrecognize\\.cxx\\cmake\\release\\x86\" cpp_speech_features",
+      "buildType": "release",
+      "toolchain": "3242770537",
+      "abi": "x86",
+      "artifactName": "cpp_speech_features",
+      "files": [
+        {
+          "src": "D:\\code\\RealProjects\\MiaoyueCounter\\speechrecognize\\src\\main\\cpp\\cpp_speech_features.cpp",
+          "flagsOrdinal": 1,
+          "workingDirectoryOrdinal": 0
+        },
+        {
+          "src": "D:\\code\\RealProjects\\MiaoyueCounter\\speechrecognize\\src\\main\\cpp\\include\\AutoGC.cpp",
+          "flagsOrdinal": 1,
+          "workingDirectoryOrdinal": 0
+        },
+        {
+          "src": "D:\\code\\RealProjects\\MiaoyueCounter\\speechrecognize\\src\\main\\cpp\\include\\Matrix.cpp",
+          "flagsOrdinal": 1,
+          "workingDirectoryOrdinal": 0
+        },
+        {
+          "src": "D:\\code\\RealProjects\\MiaoyueCounter\\speechrecognize\\src\\main\\cpp\\include\\SpeechFeatures.cpp",
+          "flagsOrdinal": 1,
+          "workingDirectoryOrdinal": 0
+        },
+        {
+          "src": "D:\\code\\RealProjects\\MiaoyueCounter\\speechrecognize\\src\\main\\cpp\\include\\Vector.cpp",
+          "flagsOrdinal": 1,
+          "workingDirectoryOrdinal": 0
+        }
+      ],
+      "headers": [
+        {
+          "header": "D:\\code\\RealProjects\\MiaoyueCounter\\speechrecognize\\src\\main\\cpp\\include\\AutoGC.h",
+          "workingDirectoryOrdinal": 0
+        },
+        {
+          "header": "D:\\code\\RealProjects\\MiaoyueCounter\\speechrecognize\\src\\main\\cpp\\include\\Matrix.h",
+          "workingDirectoryOrdinal": 0
+        },
+        {
+          "header": "D:\\code\\RealProjects\\MiaoyueCounter\\speechrecognize\\src\\main\\cpp\\include\\SpeechFeatures.h",
+          "workingDirectoryOrdinal": 0
+        },
+        {
+          "header": "D:\\code\\RealProjects\\MiaoyueCounter\\speechrecognize\\src\\main\\cpp\\include\\Vector.h",
+          "workingDirectoryOrdinal": 0
+        }
+      ],
+      "output": "D:\\code\\RealProjects\\MiaoyueCounter\\speechrecognize\\build\\intermediates\\cmake\\release\\obj\\x86\\libcpp_speech_features.so"
+    }
+  },
+  "toolchains": {
+    "3242770537": {
+      "cppCompilerExecutable": "C:\\Users\\Administrator.AU4YXG9YFFA6KPO\\AppData\\Local\\Android\\Sdk\\ndk\\21.0.6113669\\toolchains\\llvm\\prebuilt\\windows-x86_64\\bin\\clang++.exe"
+    }
+  },
+  "cFileExtensions": [],
+  "cppFileExtensions": [
+    "cpp"
+  ]
+}

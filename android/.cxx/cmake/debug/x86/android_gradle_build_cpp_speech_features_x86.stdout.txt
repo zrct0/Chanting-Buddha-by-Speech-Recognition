@@ -1,0 +1,2 @@
+ninja: Entering directory `D:\code\RealProjects\MiaoyueCounter\speechrecognize\.cxx\cmake\debug\x86'
+ninja: no work to do.

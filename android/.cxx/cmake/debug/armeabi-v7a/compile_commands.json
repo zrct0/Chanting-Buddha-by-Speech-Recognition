@@ -1,0 +1,31 @@
+[
+{
+  "directory": "D:/code/RealProjects/MiaoyueCounter/speechrecognize/.cxx/cmake/debug/armeabi-v7a",
+  "command": "C:\\Users\\Administrator.AU4YXG9YFFA6KPO\\AppData\\Local\\Android\\Sdk\\ndk\\21.0.6113669\\toolchains\\llvm\\prebuilt\\windows-x86_64\\bin\\clang++.exe --target=armv7-none-linux-androideabi21 --gcc-toolchain=C:/Users/Administrator.AU4YXG9YFFA6KPO/AppData/Local/Android/Sdk/ndk/21.0.6113669/toolchains/llvm/prebuilt/windows-x86_64 --sysroot=C:/Users/Administrator.AU4YXG9YFFA6KPO/AppData/Local/Android/Sdk/ndk/21.0.6113669/toolchains/llvm/prebuilt/windows-x86_64/sysroot  -Dcpp_speech_features_EXPORTS  -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -march=armv7-a -mthumb -Wformat -Werror=format-security  -std=c++14 -O0 -fno-limit-debug-info  -fPIC   -o CMakeFiles\\cpp_speech_features.dir\\cpp_speech_features.cpp.o -c D:\\code\\RealProjects\\MiaoyueCounter\\speechrecognize\\src\\main\\cpp\\cpp_speech_features.cpp",
+  "file": "D:\\code\\RealProjects\\MiaoyueCounter\\speechrecognize\\src\\main\\cpp\\cpp_speech_features.cpp"
+},
+
+{
+  "directory": "D:/code/RealProjects/MiaoyueCounter/speechrecognize/.cxx/cmake/debug/armeabi-v7a",
+  "command": "C:\\Users\\Administrator.AU4YXG9YFFA6KPO\\AppData\\Local\\Android\\Sdk\\ndk\\21.0.6113669\\toolchains\\llvm\\prebuilt\\windows-x86_64\\bin\\clang++.exe --target=armv7-none-linux-androideabi21 --gcc-toolchain=C:/Users/Administrator.AU4YXG9YFFA6KPO/AppData/Local/Android/Sdk/ndk/21.0.6113669/toolchains/llvm/prebuilt/windows-x86_64 --sysroot=C:/Users/Administrator.AU4YXG9YFFA6KPO/AppData/Local/Android/Sdk/ndk/21.0.6113669/toolchains/llvm/prebuilt/windows-x86_64/sysroot  -Dcpp_speech_features_EXPORTS  -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -march=armv7-a -mthumb -Wformat -Werror=format-security  -std=c++14 -O0 -fno-limit-debug-info  -fPIC   -o CMakeFiles\\cpp_speech_features.dir\\include\\AutoGC.cpp.o -c D:\\code\\RealProjects\\MiaoyueCounter\\speechrecognize\\src\\main\\cpp\\include\\AutoGC.cpp",
+  "file": "D:\\code\\RealProjects\\MiaoyueCounter\\speechrecognize\\src\\main\\cpp\\include\\AutoGC.cpp"
+},
+
+{
+  "directory": "D:/code/RealProjects/MiaoyueCounter/speechrecognize/.cxx/cmake/debug/armeabi-v7a",
+  "command": "C:\\Users\\Administrator.AU4YXG9YFFA6KPO\\AppData\\Local\\Android\\Sdk\\ndk\\21.0.6113669\\toolchains\\llvm\\prebuilt\\windows-x86_64\\bin\\clang++.exe --target=armv7-none-linux-androideabi21 --gcc-toolchain=C:/Users/Administrator.AU4YXG9YFFA6KPO/AppData/Local/Android/Sdk/ndk/21.0.6113669/toolchains/llvm/prebuilt/windows-x86_64 --sysroot=C:/Users/Administrator.AU4YXG9YFFA6KPO/AppData/Local/Android/Sdk/ndk/21.0.6113669/toolchains/llvm/prebuilt/windows-x86_64/sysroot  -Dcpp_speech_features_EXPORTS  -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -march=armv7-a -mthumb -Wformat -Werror=format-security  -std=c++14 -O0 -fno-limit-debug-info  -fPIC   -o CMakeFiles\\cpp_speech_features.dir\\include\\Matrix.cpp.o -c D:\\code\\RealProjects\\MiaoyueCounter\\speechrecognize\\src\\main\\cpp\\include\\Matrix.cpp",
+  "file": "D:\\code\\RealProjects\\MiaoyueCounter\\speechrecognize\\src\\main\\cpp\\include\\Matrix.cpp"
+},
+
+{
+  "directory": "D:/code/RealProjects/MiaoyueCounter/speechrecognize/.cxx/cmake/debug/armeabi-v7a",
+  "command": "C:\\Users\\Administrator.AU4YXG9YFFA6KPO\\AppData\\Local\\Android\\Sdk\\ndk\\21.0.6113669\\toolchains\\llvm\\prebuilt\\windows-x86_64\\bin\\clang++.exe --target=armv7-none-linux-androideabi21 --gcc-toolchain=C:/Users/Administrator.AU4YXG9YFFA6KPO/AppData/Local/Android/Sdk/ndk/21.0.6113669/toolchains/llvm/prebuilt/windows-x86_64 --sysroot=C:/Users/Administrator.AU4YXG9YFFA6KPO/AppData/Local/Android/Sdk/ndk/21.0.6113669/toolchains/llvm/prebuilt/windows-x86_64/sysroot  -Dcpp_speech_features_EXPORTS  -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -march=armv7-a -mthumb -Wformat -Werror=format-security  -std=c++14 -O0 -fno-limit-debug-info  -fPIC   -o CMakeFiles\\cpp_speech_features.dir\\include\\SpeechFeatures.cpp.o -c D:\\code\\RealProjects\\MiaoyueCounter\\speechrecognize\\src\\main\\cpp\\include\\SpeechFeatures.cpp",
+  "file": "D:\\code\\RealProjects\\MiaoyueCounter\\speechrecognize\\src\\main\\cpp\\include\\SpeechFeatures.cpp"
+},
+
+{
+  "directory": "D:/code/RealProjects/MiaoyueCounter/speechrecognize/.cxx/cmake/debug/armeabi-v7a",
+  "command": "C:\\Users\\Administrator.AU4YXG9YFFA6KPO\\AppData\\Local\\Android\\Sdk\\ndk\\21.0.6113669\\toolchains\\llvm\\prebuilt\\windows-x86_64\\bin\\clang++.exe --target=armv7-none-linux-androideabi21 --gcc-toolchain=C:/Users/Administrator.AU4YXG9YFFA6KPO/AppData/Local/Android/Sdk/ndk/21.0.6113669/toolchains/llvm/prebuilt/windows-x86_64 --sysroot=C:/Users/Administrator.AU4YXG9YFFA6KPO/AppData/Local/Android/Sdk/ndk/21.0.6113669/toolchains/llvm/prebuilt/windows-x86_64/sysroot  -Dcpp_speech_features_EXPORTS  -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -march=armv7-a -mthumb -Wformat -Werror=format-security  -std=c++14 -O0 -fno-limit-debug-info  -fPIC   -o CMakeFiles\\cpp_speech_features.dir\\include\\Vector.cpp.o -c D:\\code\\RealProjects\\MiaoyueCounter\\speechrecognize\\src\\main\\cpp\\include\\Vector.cpp",
+  "file": "D:\\code\\RealProjects\\MiaoyueCounter\\speechrecognize\\src\\main\\cpp\\include\\Vector.cpp"
+}
+]
